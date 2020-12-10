@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "del lib && tsc --pretty",
+    "build": "tsc --pretty",
     "prepare": "npm run build",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run verify_all && npm run build",
