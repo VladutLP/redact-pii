@@ -1,6 +1,6 @@
 {
-  "name": "redact-pii",
-  "version": "3.2.3",
+  "name": "goodleap-redact-pii",
+  "version": "4.0.0",
   "description": "Remove personally identifiable information from text.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -19,23 +19,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/solvvy/redact-pii.git"
+    "url": "https://github.com/vladutlp/redact-pii.git"
   },
   "author": "Christian Theilemann <christian@solvvy.com>",
   "license": "MIT",
   "dependencies": {
-    "@google-cloud/dlp": "^0.12.0",
-    "lodash": "^4.17.15"
+    "@google-cloud/dlp": "^3.0.4",
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "@types/jest": "24.0.11",
-    "@types/lodash": "^4.14.136",
-    "changelog-verify": "1.1.2",
+    "@types/jest": "26.0.14",
+    "@types/lodash": "^4.14.161",
+    "changelog-verify": "^1.1.2",
     "del-cli": "1.1.0",
-    "jest": "24.7.1",
+    "jest": "26.5.2",
     "prettier": "1.17.0",
-    "ts-jest": "24.0.2",
-    "typescript": "3.4.3",
+    "ts-jest": "26.4.3",
+    "typescript": "3.9.7",
     "version-changelog": "3.1.1"
   },
   "prettier": {
