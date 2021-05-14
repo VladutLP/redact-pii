@@ -184,6 +184,16 @@ describe('index.js', function() {
     expect(customRedactor.redact('my ip: 10.1.1.235.')).toBe('my ip: REDACTED.');
   });
 
+  it('should respect a custom replaceWith for names', function () {
+    let customRedactor = new SyncRedactor({ builtInRedactors: { names: { replaceWith: 'N-A-M-E' } } });
+    expect(customRedactor.redact('Subject. Hi David Johnson.')).toBe('Subject. Hi N-A-M-E.');
+  });
+
+  it('should respect a custom replaceWith for simpleRegex', function () {
+    let customRedactor = new SyncRedactor({ builtInRedactors: { ipAddress: { replaceWith: '{{IP_ADDRESS}}' } } });
+    expect(customRedactor.redact('my ip: 10.1.1.235.')).toBe('my ip: {{IP_ADDRESS}}.');
+  });
+
   it('should accept new patterns', function() {
     let redactor = new SyncRedactor({
       customRedactors: { after: [{ regexpPattern: /\b(cat|dog|cow)s?\b/gi, replaceWith: 'ANIMAL' }] }
